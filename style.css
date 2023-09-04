@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background-image: url(photo_2023-08-18_21-24-14.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 20vh;
+  padding-top: 10vh;
+  animation-name: scale-in-center;
+  animation-duration: 2000ms;
+}
+
+h1 {
+  font-size: 10vh;
+  font-weight: 1200;
+  color: white;
+  text-shadow: black 5px 5px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .datepicker {
+    flex-direction: column;
+    height: 50vh;
+    width: 25vw;
+  }
+
+  #date {
+    position: relative;
+    max-height: 5vh;
+    min-height: 2vh;
+    max-width: 100vh;
+    min-width: 8vh;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+}
+
+.datepicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  width: 50vw;
+  /* min-width: 30vw; */
+  background: rgba(255, 255, 255, 0.164);
+  backdrop-filter: saturate(180%) blur(4px);
+  /* border: 0.5px solid white; */
+  border-radius: 10px;
+  animation-name: scale-in-center;
+  animation-duration: 1000ms;
+  padding: 0 4vh 0 4vh;
+}
+
+#date,
+#calculateButton {
+  margin: 5px 0 5px 0;
+  animation-name: scale-in-center;
+  animation-duration: 2000ms;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  font-weight: 900;
+  font-size: 2em;
+  text-shadow: black 5px 5px 20px;
+  margin-top: 100px;
+
+}
+
+#date {
+  margin-right: 2vw;
+  padding: 1vh 2vw;
+  border: 0;
+  outline: 0;
+  height: 8vh;
+  width: 50vw;
+  border-radius: 5px;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+#calculateButton {
+  border: 0;
+  outline: 0;
+  padding: 3vh 4vw;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #37476d 0%, #235dd3 100%);
+  font-size: 20px;
+  color: #f6f4eb;
+}
+
+.result.animation {
+  animation-name: scale-in-center;
+  animation-duration: 1000ms;
+}
